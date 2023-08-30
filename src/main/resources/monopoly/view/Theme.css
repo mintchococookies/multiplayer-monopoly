@@ -1,0 +1,78 @@
+/*This file is referring to practical class Address App framework */
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d, 20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d, 50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-radius: 10, 10, 10, 10;
+    -fx-background-radius: 10, 10, 10, 10;
+    -fx-background-color: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16pt;
+    -fx-text-fill: #3a3a3a;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #eeeeee;
+}
+
+.button:pressed,
+.button:default:hover:pressed {
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled,
+.button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color, 30%);
+}
+
+.text {
+    -fx-font-size: 16pt;
+    -fx-text-fill: #3a3a3a;
+}
+
+.label-bold {
+    -fx-font-weight: bold;
+}
+
+.page-heading {
+    -fx-font-weight: bold;
+    -fx-font-size: 26pt;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane PrefHeight="900.0" prefWidth="1200.0" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.GameController">
+   <children>
+      <ImageView fitHeight="911.0" fitWidth="1607.0" layoutX="-153.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/game_background.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="landInformationBox" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="825.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="331.0" />
+      <ImageView fitHeight="810.0" fitWidth="722.0" layoutX="47.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/board.png" />
+         </image>
+      </ImageView>
+      <Box depth="100" drawMode="LINE" height="100" layoutX="435.0" layoutY="307.0" opacity="0.0" width="100" />
+      <Circle fx:id="playerM1" layoutX="81.0" layoutY="717.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="rollDiceButton" layoutX="838.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleRollDice" text="Roll Dice" />
+      <Circle layoutX="157.0" layoutY="785.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="exitGameButton" layoutX="920.0" layoutY="800.0" mnemonicParsing="false" onAction="#handleExitGame" text="Exit Game" />
+      <Label fx:id="currentPlayerLabel" layoutX="929.0" layoutY="52.0" styleClass="label-bold" text="Player 2's Turn" underline="true" />
+      <Label layoutX="930.0" layoutY="90.0" text="Money:  $" />
+      <Label fx:id="actionLabel" alignment="CENTER" layoutX="823.0" layoutY="265.0" prefHeight="31.0" prefWidth="317.0" styleClass="label-bold" text="Landed on" textAlignment="CENTER" />
+      <Label fx:id="landDescriptionLabel" alignment="CENTER" layoutX="807.0" layoutY="346.0" prefHeight="31.0" prefWidth="349.0" text="Unowned Property" />
+      <Label fx:id="player1Name" layoutX="203.0" layoutY="764.0" styleClass="label-bold" text="Player 1" />
+      <Label layoutX="203.0" layoutY="795.0" text="Money: $" />
+      <Label layoutX="917.0" layoutY="131.0" text="Net Worth:  $" />
+      <Label layoutX="203.0" layoutY="823.0" text="Net Worth: $" />
+      <Label fx:id="player1MoneyLabel" layoutX="296.0" layoutY="795.0" text="100" />
+      <Label fx:id="player1NetWorthLabel" layoutX="331.0" layoutY="823.0" text="2000" />
+      <Circle fill="WHITE" layoutX="415.0" layoutY="782.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="player2Name" layoutX="461.0" layoutY="761.0" styleClass="label-bold" text="Player 2" />
+      <Label layoutX="461.0" layoutY="792.0" text="Money: $" />
+      <Label layoutX="461.0" layoutY="820.0" text="Net Worth: $" />
+      <Label fx:id="player2MoneyLabel" layoutX="554.0" layoutY="792.0" text="100" />
+      <Label fx:id="player2NetWorthLabel" layoutX="589.0" layoutY="820.0" text="2000" />
+      <Label fx:id="landRentLabel" alignment="CENTER" layoutX="828.0" layoutY="558.0" prefHeight="31.0" prefWidth="325.0" text="Rent:  $ 50" />
+      <Label fx:id="landPriceLabel" alignment="CENTER" layoutX="918.0" layoutY="527.0" prefHeight="31.0" prefWidth="146.0" text="Price:  $ 300" />
+      <Label fx:id="propertyRentHouseLabel" alignment="CENTER" layoutX="827.0" layoutY="589.0" prefHeight="31.0" prefWidth="325.0" text="Rent for each House:  $ 100" />
+      <Label fx:id="propertyHousePriceLabel" alignment="CENTER" layoutX="901.0" layoutY="620.0" text="House Costs:  $ 200" />
+      <Label fx:id="currentPlayerMoneyLabel" layoutX="1028.0" layoutY="90.0" text="300" />
+      <Label fx:id="currentPlayerNetWorthLabel" layoutX="1048.0" layoutY="131.0" text="5000" />
+      <Circle fx:id="playerM2" fill="WHITE" layoutX="131.0" layoutY="717.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+      <Button fx:id="buyLandButton" layoutX="903.0" layoutY="401.0" mnemonicParsing="false" onAction="#handleBuyLand" text="Buy Property" />
+      <Button fx:id="endTurnButton" layoutX="1009.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleEndTurn" text="End Turn" />
+      <Label fx:id="landInformationLabel" alignment="CENTER" layoutX="845.0" layoutY="488.0" prefHeight="31.0" prefWidth="294.0" styleClass="label-bold" text="Land Information" underline="true" />
+      <Circle fx:id="currentPlayerMarker" layoutX="896.0" layoutY="68.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="buyHouseButton" layoutX="915.0" layoutY="401.0" mnemonicParsing="false" onAction="#handleBuyHouse" text="Buy House" />
+      <Label fx:id="affordLabel" alignment="CENTER" layoutX="830.0" layoutY="406.0" prefHeight="31.0" prefWidth="331.0" text="You Cannot Afford This Property" />
+      <ImageView fx:id="diceImage" fitHeight="78.0" fitWidth="75.0" layoutX="491.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dice1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="takeChanceButton" layoutX="904.0" layoutY="401.0" mnemonicParsing="false" onAction="#handleTakeChance" text="Take Chance" />
+      <Label fx:id="landLabel" alignment="CENTER" layoutX="823.0" layoutY="297.0" prefHeight="31.0" prefWidth="317.0" styleClass="label-bold" text="Boardwalk" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

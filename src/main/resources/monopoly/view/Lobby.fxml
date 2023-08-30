@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.LobbyController">
+    <children>
+        <ImageView fitHeight="931.0" fitWidth="2010.0" layoutX="-351.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/lobby_background.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="playerName" layoutX="350.0" layoutY="172.0" prefHeight="52.0" prefWidth="476.0" />
+        <Label layoutX="149.0" layoutY="183.0" text="Your Username" />
+        <TableView fx:id="roomTable" layoutX="523.0" layoutY="281.0" prefHeight="323.0" prefWidth="566.0">
+            <columns>
+                <TableColumn fx:id="ownerColumn" prefWidth="406.0" text="Room Owner Name" />
+                <TableColumn fx:id="capacityColumn" minWidth="0.0" prefWidth="159.0" text="Capacity" />
+            </columns>
+        </TableView>
+        <Button fx:id="joinBtn" layoutX="898.0" layoutY="178.0" mnemonicParsing="false" onAction="#playerJoin" text="Join Lobby" />
+        <ListView fx:id="onlineList" layoutX="139.0" layoutY="281.0" prefHeight="323.0" prefWidth="265.0" />
+        <Button fx:id="startBtn" layoutX="890.0" layoutY="618.0" mnemonicParsing="false" onAction="#joinRoom" text="Join Room" />
+        <Button fx:id="createBtn" layoutX="588.0" layoutY="618.0" mnemonicParsing="false" onAction="#handleCreate" text="Create Room" />
+        <Label layoutX="199.0" layoutY="241.0" styleClass="label-bold" text="Players Online" underline="true" />
+        <Label alignment="CENTER" layoutX="416.0" layoutY="80.0" prefHeight="31.0" prefWidth="369.0" styleClass="label-bold" text="Welcome to the Monopoly Lobby!" textAlignment="CENTER" />
+        <Label layoutX="722.0" layoutY="241.0" styleClass="label-bold" text="Rooms Available" underline="true" />
+        <Button fx:id="backBtn" layoutX="189.0" layoutY="618.0" mnemonicParsing="false" onAction="#handleBack" text="Back to Menu" />
+        <Label layoutX="45.0" layoutY="42.0" styleClass="label-bold" stylesheets="@Theme.css" text="Status:" />
+        <Label fx:id="connectionLabel" layoutX="122.0" layoutY="42.0" styleClass="label-bold" stylesheets="@Theme.css" text="Not connected" />
+    </children>
+</AnchorPane>
