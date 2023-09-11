@@ -1,7 +1,7 @@
 # Online Multiplayer Monopoly in Scala and ScalaFX
 Online Multiplayer GUI-based Monopoly Game developed with Akka in Scala and ScalaFX
 
-![alt text](https://github.com/mintchococookies/multiplayer-monopoly/blob/main/monopoly-capture.PNG?raw=true)
+![alt text](https://github.com/mintchococookies/multiplayer-monopoly/blob/main/monopoly-capture.png)
 
 This two-player online Monopoly Java Desktop game was developed using the Model-View-Controller (MVC) architectural pattern, Akka middleware framework, and Json API. In addition, the game was developed in the Object-oriented Programming style to ensure systematic development and maintenance. Using the Akka middleware, the program can be hosted on a server which will allow multiple clients to join and play the game together through the internet or locally within the same network. 
 
