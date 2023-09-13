@@ -3,6 +3,37 @@ Online Multiplayer GUI-based Monopoly Game developed with Akka in Scala and Scal
 
 ![alt text](https://github.com/mintchococookies/multiplayer-monopoly/blob/main/monopoly-capture.png)
 
+# Features
+## Menu
+- View the Game Menu.
+- Start the Game.
+- View the How to Play page.
+- Exit the program.
+
+## Toolbar
+- Exit the program.
+- View the How to Play page.
+
+## Game
+- Input usernames before starting the game. The players will be identified by these usernames in the game. If a player does not input a username when starting the game, they will be referred to as Player 1 or Player 2 in the game.
+- View the players’ money and net worth.
+- View which player’s turn it is.
+- Roll the dice to move around the board.
+- View the price and rental information of a property or utility when landing on it.
+- Choose to buy an unowned property when landing on it if they can afford it.
+- Choose to buy a house on an owned property when landing on it if they can afford it. A maximum of 4 houses can be bought on each property.
+- Choose to buy an unowned utility when landing on it if they can afford it.
+- View which properties and utilities have been bought by which player via markers on the board.
+- View the bought houses on each property via markers on the board.
+- Pay rent to the owner of a property or utility when landing on it.
+- Receive rent from the player who lands on their owned property or utility.
+- Receive $200 each time they pass the start square (GO).
+- Take a randomly generated chance when landing on a chance card square.
+- Go to Jail and miss 3 rounds.
+- End their turn.
+- When a player has won, view a dialog stating which player has won alongside their money and net worth.
+
+# Description
 This two-player online Monopoly Java Desktop game was developed using the Model-View-Controller (MVC) architectural pattern, Akka middleware framework, and Json API. In addition, the game was developed in the Object-oriented Programming style to ensure systematic development and maintenance. Using the Akka middleware, the program can be hosted on a server which will allow multiple clients to join and play the game together through the internet or locally within the same network. 
 
 The program simulates the gameplay of the widely known Monopoly board game. The two players will take turns rolling a dice and moving across the squares on the board according to the dice number. At each square, the player will be able to perform actions specific to the type of square, such as buying a property, paying rent, or going to jail. The players are given $1200 when they begin the game. Each time they pass the Start (GO) square, they are given an additional $200. The money is used to perform transactions such as buying properties and houses and paying rent. The game ends when a player does not have enough money to fulfil a transaction, i.e., has less than $0 in funds. Once the game ends, the players can view the ranking of their final net worth in the scoreboard which is maintained on the server.
